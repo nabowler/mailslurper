@@ -38,12 +38,12 @@ jobs:
         password: ${{secrets.DOCKERHUB_PASSWORD}}
 
     - name: Build and push Docker images
-      uses: docker/build-push-action@v2.4.0
+      uses: docker/build-push-action@v2.7.0
       with:
         file: ./Dockerfile
         push: ${{ github.event_name != 'pull_request' }}
         tags: |
-          latest
+          nbowler/ms:latest
           ${{ steps.meta.outputs.tags }}
         labels: |
           ${{ steps.meta.outputs.labels }}
