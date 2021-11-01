@@ -20,9 +20,8 @@ jobs:
       uses: docker/metadata-action@v3
       with:
       # list of Docker images to use as base name for tags
-       images: |
-        nbowler/ms
-        # generate Docker tags based on the following events/attributes
+        images: |
+          nbowler/ms
         tags: |
           type=schedule
           type=ref,event=branch
