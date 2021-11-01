@@ -29,7 +29,7 @@ jobs:
         tags: |
           nbowler/ms:latest
           nbowler/ms:${{github.run_number}}
-        labels: label1,label2, label 3
+        labels: label1=foo,label2=bar,label3=baz
  
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
